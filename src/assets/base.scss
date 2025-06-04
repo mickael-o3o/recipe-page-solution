@@ -3,6 +3,32 @@
 @use './base/typography' as *;
 
 :root {
+  --layout-mobile: #{$mobile};
+  --layout-desktop: #{$desktop};
+
+  --color-white: #{$white};
+  --color-stone-100: #{$stone-100};
+  --color-stone-150: #{$stone-150};
+  --color-stone-600: #{$stone-600};
+  --color-stone-900: #{$stone-900};
+  --color-brown-800: #{$brown-800};
+  --color-rose-800: #{$rose-800};
+  --color-rose-50: #{$rose-50};
+
+  --font-family-young-serif: #{$family-young-serif};
+  --font-family-outfit: #{$family-outfit};
+}
+
+@font-face {
+  font-family: $family-young-serif;
+  src: url('./fonts/young-serif/YoungSerif-Regular.ttf');
+  font-weight: $weights-young-serif;
+}
+
+@font-face {
+  font-family: $family-outfit;
+  src: url('./fonts/outfit/Outfit-VariableFont_wght.ttf');
+  font-weight: $weights-outfit;
 }
 
 *,
@@ -18,4 +44,5 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family-outfit);
 }
