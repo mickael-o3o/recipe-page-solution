@@ -1,9 +1,8 @@
-:root {
-}
+@use './base/colors' as *;
+@use './base/layout' as *;
+@use './base/typography' as *;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
+:root {
 }
 
 *,
