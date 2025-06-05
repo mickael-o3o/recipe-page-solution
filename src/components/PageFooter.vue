@@ -14,10 +14,7 @@
   text-align: center;
   font-family: monospace;
   line-height: 1.5rem;
-  position: fixed;
-  left: 50%;
-  translate: -50% 0;
-  bottom: 1rem;
+  margin-top: 2rem;
   width: calc(var(--layout-mobile) - 4rem);
   padding: 1rem;
   background-color: var(--color-rose-50);
