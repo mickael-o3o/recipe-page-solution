@@ -10,7 +10,7 @@
 
 <style>
 .attribution {
-  font-size: 0.6875;
+  font-size: 0.6875rem;
   text-align: center;
   font-family: monospace;
   line-height: 1.5rem;
