@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ListWithHightlight from '../utils/ListWithHightlight.vue'
 const preparationTime = [
   'Total: Approximately 10 minutes',
   'Preparation: 5 minutes',
