@@ -36,6 +36,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-weight: normal;
 }
 
@@ -45,4 +46,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-family-outfit);
+  line-height: 1.5rem;
+  color: var(--color-stone-600);
+  background-color: var(--color-stone-100);
 }

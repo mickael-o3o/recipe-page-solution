@@ -1,0 +1,15 @@
+@mixin list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+@mixin section-header {
+  font: {
+    family: var(--font-family-young-serif);
+    size: 1.875rem;
+  }
+  color: var(--color-brown-800);
+  margin-bottom: 1.626rem;
+}

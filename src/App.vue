@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import PageFooter from './components/PageFooter.vue'
+import PageMain from './components/PageSection.vue'
+</script>
+
 <template>
-  <main><h1>Helooo</h1></main>
+  <PageMain />
+  <PageFooter />
 </template>

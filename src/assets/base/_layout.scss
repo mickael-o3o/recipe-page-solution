@@ -1,4 +1,4 @@
 @use 'sass:math';
 
-$mobile: math.div(375, 16);
-$desktop: math.div(1440, 16);
+$mobile: math.div(375, 16) * 1rem;
+$desktop: math.div(1440, 16) * 1rem;
