@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/mickael-o3o.github.io/recipe-page-solution/',
+  base: '/recipe-page-solution/',
   plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
