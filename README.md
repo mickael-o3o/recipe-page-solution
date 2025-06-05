@@ -1,39 +1,69 @@
-# vue-project
+# Frontend Mentor - Recipe page solution
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a solution to the [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Recommended IDE Setup
+## Table of contents
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-## Type Support for `.vue` Imports in TS
+## Overview
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Screenshot
 
-## Customize configuration
+![](./screenshot.png)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Links
 
-## Project Setup
+- Solution URL: [https://github.com/mickael-o3o/recipe-page-solution.git](https://github.com/mickael-o3o/recipe-page-solution.git)
+- Live Site URL: [live site URL](https://mickael-o3o.github.io/recipe-page-solution)
 
-```sh
-pnpm install
+## My process
+
+### Built with
+
+- [Vue](https://vuejs.org)
+- [Sass](https://sass-lang.com)
+- Mobile-first workflow
+
+### What I learned
+
+Use counters to create custom list markers.
+
+```sass
+&-list {
+    @include mixins.list;
+    counter-reset: li;
+
+    li {
+      padding-left: 2.625rem;
+      position: relative;
+
+      &::before {
+        content: counter(li) '.';
+        counter-increment: li;
+        color: var(--color-brown-800);
+        font-weight: 700;
+        display: inline;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        translate: 0 -0.5rem;
+      }
+    }
+  }
 ```
 
-### Compile and Hot-Reload for Development
+### Continued development
 
-```sh
-pnpm dev
-```
+Next time I'll create variables to store spacings so tweaking theme will be easier.
 
-### Type-Check, Compile and Minify for Production
+## Author
 
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+- Frontend Mentor - [@mickael-o3o](https://www.frontendmentor.io/profile/mickael-o3o)
