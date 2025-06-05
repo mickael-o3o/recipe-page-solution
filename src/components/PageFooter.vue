@@ -10,7 +10,7 @@
 
 <style>
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875;
   text-align: center;
   font-family: monospace;
   line-height: 1.5rem;
@@ -18,6 +18,7 @@
   left: 50%;
   translate: -50% 0;
   bottom: 1rem;
+  width: calc(var(--layout-mobile) - 4rem);
   padding: 1rem;
   background-color: var(--color-rose-50);
   border: 1px solid var(--color-rose-800);
