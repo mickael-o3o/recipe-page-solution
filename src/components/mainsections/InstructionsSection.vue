@@ -9,9 +9,9 @@ const { instructions } = defineProps<Props>()
 </script>
 
 <template>
-  <section class="instructions-container">
-    <h2 class="instructions-header">Instructions</h2>
-    <ol class="instructions-list">
+  <section class="s-instructions">
+    <h2 class="s-instructions__header">Instructions</h2>
+    <ol class="s-instructions__list">
       <li v-for="(item, index) in instructions" :key="index">
         <ReusableListItem :item="item" :include-hightlight="true" />
       </li>
@@ -22,27 +22,30 @@ const { instructions } = defineProps<Props>()
 <style lang="scss" scoped>
 @use '../../assets/utils/mixins';
 
-.instructions {
-  &-header {
+.s-instructions {
+  &__header {
     @include mixins.section-header;
   }
-  &-list {
+
+  &__list {
     @include mixins.list;
     counter-reset: li;
 
     li {
-      padding-left: 2.625rem;
+      padding-inline-start: 2.5rem;
       position: relative;
+      letter-spacing: -0.006rem;
 
       &::before {
         content: counter(li) '.';
+        letter-spacing: 0.01rem;
         counter-increment: li;
         color: var(--color-brown-800);
         font-weight: 700;
         display: inline;
         position: absolute;
-        top: 0.5rem;
-        left: 0.5rem;
+        inset-block-start: 0.5rem;
+        inset-inline-start: 0.5rem;
         translate: 0 -0.5rem;
       }
     }

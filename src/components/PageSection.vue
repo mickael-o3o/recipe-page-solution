@@ -33,16 +33,16 @@ const nutritions = { Calories: '277kcal', Carbs: '0g', Protein: '20g', Fat: '22g
 </script>
 
 <template>
-  <header class="header">
+  <header class="p-header">
     <img
       src="/images/image-omelette.jpeg"
       alt="omelette image"
-      width="1312"
-      height="600"
-      class="image-header"
+      width="1312px"
+      height="600px"
+      class="p-header__image"
     />
   </header>
-  <main class="main-container">
+  <main class="p-main">
     <DescriptionSection :preparations="preparations" :ingredients="ingredients" />
     <hr />
     <InstructionsSection :instructions="instructions" />
@@ -52,48 +52,44 @@ const nutritions = { Calories: '277kcal', Carbs: '0g', Protein: '20g', Fat: '22g
 </template>
 
 <style lang="scss" scoped>
-.header {
-  width: 100vw;
-  max-width: var(--layout-mobile);
+.p-header {
   margin: 0 auto;
   background-color: var(--color-white);
-  border-radius: 1rem 1rem 0 0;
+  inline-size: 100%;
   overflow: hidden;
 
-  @media (min-width: 90rem) {
-    max-width: 43.75rem;
-    padding: 1.875rem;
+  @media (min-width: 812px) {
+    margin-top: 7.7rem;
+    padding: 2.5rem;
     padding-bottom: 0;
+    border-radius: 1rem 1rem 0 0;
   }
 
-  .image-header {
-    width: 100%;
-    max-width: var(--layout-mobile);
+  &__image {
+    max-width: 100%;
     height: auto;
     display: block;
 
-    @media (min-width: 90rem) {
-      max-width: calc(43.75rem - 1.875rem);
+    @media (min-width: 812px) {
       border-radius: 0.5rem;
     }
   }
 }
 
-.main-container {
+.p-main {
   background-color: var(--color-white);
-  width: 100vw;
-  max-width: var(--layout-mobile);
+  inline-size: 100%;
   margin: 0 auto;
-  padding: 1.875rem;
+  padding: 2.5rem;
+  padding-top: 2.45rem;
+  padding-block-end: 1.8rem;
   border-radius: 0 0 1rem 1rem;
-
-  @media (min-width: 90rem) {
-    max-width: 43.75rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2.02rem;
 }
 
 hr {
-  margin: 2.25rem 0;
-  color: var(--color-rose-50);
+  color: palegoldenrod;
 }
 </style>

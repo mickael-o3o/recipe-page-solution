@@ -10,9 +10,9 @@ const { item, includeDisc } = defineProps<Props>()
 
 <template>
   <div class="list-item">
-    <span v-if="includeDisc" class="list-item-disc"></span>
-    <p class="list-item-content">
-      <span :class="{ 'list-item-content-hightlight': includeHightlight }">{{
+    <span v-if="includeDisc" class="list-item__disc"></span>
+    <p class="list-item__content">
+      <span :class="{ 'list-item__hightlight': includeHightlight }">{{
         item.includes(':') ? item.split(':')[0] : ''
       }}</span>
       {{ item.includes(':') ? item.substring(item.indexOf(':')) : item }}
@@ -24,9 +24,9 @@ const { item, includeDisc } = defineProps<Props>()
 .list-item {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
 
-  &-disc {
+  &__disc {
     display: inline-block;
     width: 0.25rem;
     height: 0.25rem;
@@ -35,10 +35,8 @@ const { item, includeDisc } = defineProps<Props>()
     flex-shrink: 0;
   }
 
-  &-content {
-    &-hightlight {
-      font-weight: 700;
-    }
+  &__hightlight {
+    font-weight: 700;
   }
 }
 </style>

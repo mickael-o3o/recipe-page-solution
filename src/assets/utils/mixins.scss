@@ -8,8 +8,9 @@
 @mixin section-header {
   font: {
     family: var(--font-family-young-serif);
-    size: 1.875rem;
+    size: 1.7rem;
   }
   color: var(--color-brown-800);
-  margin-bottom: 1.626rem;
+  margin-block-end: 1.58rem;
+  letter-spacing: 0.04rem;
 }

@@ -11,16 +11,16 @@ const { nutritions } = defineProps<Props>()
 </script>
 
 <template>
-  <section class="nutrition-container">
-    <h2 class="nutrition-header">Nutrition</h2>
-    <p class="nutrition-description">
+  <section class="s-nutrition">
+    <h2 class="s-nutrition__header">Nutrition</h2>
+    <p class="s-nutrition__description">
       The table below shows nutritional values per serving without the additional fillings.
     </p>
-    <table class="nutrition-table">
+    <table class="s-nutrition__table">
       <tbody>
-        <tr v-for="(value, key) in nutritions" :key="key">
-          <td class="nutrition-table-key">{{ key }}</td>
-          <td class="nutrition-table-value">{{ value }}</td>
+        <tr class="s-nutrition__table-row" v-for="(value, key) in nutritions" :key="key">
+          <td class="s-nutrition__table-data s-nutrition__table-key">{{ key }}</td>
+          <td class="s-nutrition__table-data s-nutrition__table-value">{{ value }}</td>
         </tr>
       </tbody>
     </table>
@@ -30,34 +30,42 @@ const { nutritions } = defineProps<Props>()
 <style lang="scss">
 @use '../../assets/utils/mixins';
 
-.nutrition {
-  &-header {
+.s-nutrition {
+  &__header {
     @include mixins.section-header;
   }
 
-  &-description {
-    margin-bottom: 1rem;
+  &__description {
+    margin-block-end: 0.75rem;
   }
 
-  &-table {
-    width: 100%;
+  &__table {
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
 
-    td {
-      border-bottom: 1px solid var(--color-stone-150);
-      width: 50%;
-    }
+  &__table-row {
+    border-block-end: 1px solid var(--color-stone-150);
 
-    &-key {
-      padding: 0.75rem 0;
-      padding-left: 2.125rem;
+    &:last-child {
+      border-block-end: none;
     }
+  }
 
-    &-value {
-      font-weight: 600;
-      color: var(--color-brown-800);
-      text-align: left;
-      padding-left: 0.5rem;
-    }
+  &__table-data {
+    inline-size: 50%;
+  }
+
+  &__table-key {
+    padding: 0.725rem 0;
+    padding-inline-start: 2rem;
+  }
+
+  &__table-value {
+    font-weight: 600;
+    color: var(--color-brown-800);
+    text-align: left;
+    padding-inline-start: 0.5rem;
   }
 }
 </style>

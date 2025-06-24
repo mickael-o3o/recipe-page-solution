@@ -1,12 +1,11 @@
 @use './base' as *;
 
 #app {
-  margin: auto auto;
+  margin: 0 auto;
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100vh;
+  inline-size: 100%;
+  max-inline-size: 46rem;
 }
